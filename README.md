@@ -105,7 +105,7 @@ Frontend : http://localhost:5173
 Backend  : http://localhost:5000
 
 # Screenshots
-
+![MongoDB](./screenshots/mongodb.png)
 ![Dashboard](./screenshots/dashboard.png)
 ![Employees](./screenshots/employees.png)
 ![Tasks](./screenshots/tasks.png)
