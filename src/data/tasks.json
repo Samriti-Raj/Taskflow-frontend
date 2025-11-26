@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Build Login Page",
+    "description": "Create responsive login UI",
+    "status": "pending",
+    "assignedTo": 1,
+    "deadline": "2025-01-20"
+  },
+  {
+    "id": 2,
+    "title": "Design Dashboard",
+    "description": "Create dashboard mockups",
+    "status": "completed",
+    "assignedTo": 2,
+    "deadline": "2025-01-18"
+  },
+  {
+    "id": 3,
+    "title": "API Spec Documentation",
+    "description": "Write API contract for tasks",
+    "status": "pending",
+    "assignedTo": 3,
+    "deadline": "2025-01-25"
+  }
+]
