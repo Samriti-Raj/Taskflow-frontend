@@ -115,7 +115,7 @@ Add your screenshots in a screenshots/ folder and link them here:
 ![Employees](./screenshots/employees.png)
 ![Tasks](./screenshots/tasks.png)
 
-# Deployment (Optional but recommended for bonus points)
+# Deployment
 
 Frontend: Vercel
 
