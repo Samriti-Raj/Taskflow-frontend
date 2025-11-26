@@ -60,7 +60,7 @@ export default function TaskCard({ task, employee }) {
       </div>
 
 
-      <div className="flex gap-6">
+      <div className="flex gap-18">
 
         <button
           onClick={() => navigate(`/edit-task/${task._id}`)}

@@ -37,7 +37,7 @@ export default function EmployeeCard({ emp }) {
         <span className="truncate">{emp.email}</span>
       </div>
 
-      <div className="flex gap-2">
+      <div className="flex gap-16">
 
         <button
           onClick={handleDelete}
