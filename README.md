@@ -42,6 +42,7 @@ MongoDB (Local or Atlas)
 
 # Project Structure
 Track3/
+
     backend/ = API + Database
     
     frontend/ = UI built with React + Tailwind
