@@ -13,7 +13,7 @@ export default function TaskCard({ task, employee }) {
       .delete(`${API_BASE_URL}/tasks/${task._id}`)
       .then(() => {
         alert("Task deleted successfully!");
-        window.location.reload();
+        navigate("/tasks");
       })
       .catch(() => alert("Failed to delete task"));
   };
