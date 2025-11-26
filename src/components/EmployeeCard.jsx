@@ -1,4 +1,3 @@
-
 import axios from "axios";
 import { API_BASE_URL } from "../config";
 import { Mail, Trash2, Pencil } from "lucide-react";
@@ -20,39 +19,39 @@ export default function EmployeeCard({ emp }) {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all p-4 sm:p-6 border border-green-100">
-      <div className="flex items-start justify-between mb-4">
-        <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-white text-xl sm:text-2xl font-bold flex-shrink-0">
+    <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all p-3 md:p-4 border border-green-100">
+      <div className="flex items-start justify-between mb-3">
+        <div className="w-11 h-11 md:w-12 md:h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-white text-lg font-bold flex-shrink-0">
           {emp.name.charAt(0)}
         </div>
-        <span className="px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-700">
+        <span className="px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-700">
           {emp.department}
         </span>
       </div>
 
-      <h2 className="text-lg sm:text-xl font-bold text-black mb-1 truncate">{emp.name}</h2>
-      <p className="text-sm text-black mb-4 truncate">{emp.role}</p>
+      <h2 className="text-base md:text-lg font-bold text-black mb-1 truncate">{emp.name}</h2>
+      <p className="text-xs md:text-sm text-gray-600 mb-3 truncate">{emp.role}</p>
 
-      <div className="flex items-center gap-2 text-xs sm:text-sm text-black mb-4 overflow-hidden">
-        <Mail className="w-4 h-4 flex-shrink-0" />
+      <div className="flex items-center gap-2 text-xs md:text-sm text-gray-600 mb-3 overflow-hidden">
+        <Mail className="w-3.5 h-3.5 md:w-4 md:h-4 flex-shrink-0" />
         <span className="truncate">{emp.email}</span>
       </div>
 
-      <div className="flex flex-col xs:flex-row gap-3 mt-4">
+      <div className="flex gap-2">
 
         <button
           onClick={handleDelete}
-          className="flex items-center justify-center gap-2 bg-red-500 text-white px-4 py-2 rounded-xl hover:bg-red-600 transition text-sm sm:text-base"
+          className="flex-1 flex items-center justify-center gap-1.5 bg-red-500 text-white px-3 py-1.5 rounded-lg hover:bg-red-600 transition text-xs md:text-sm font-medium"
         >
-          <Trash2 className="w-4 h-4" />
+          <Trash2 className="w-3.5 h-3.5" />
           Delete
         </button>
 
         <button
           onClick={() => navigate(`/edit-employee/${emp._id}`)}
-          className="flex items-center justify-center gap-2 bg-blue-500 text-white px-4 py-2 rounded-xl hover:bg-blue-600 transition text-sm sm:text-base"
+          className="flex-1 flex items-center justify-center gap-1.5 bg-blue-500 text-white px-3 py-1.5 rounded-lg hover:bg-blue-600 transition text-xs md:text-sm font-medium"
         >
-          <Pencil className="w-4 h-4" />
+          <Pencil className="w-3.5 h-3.5" />
           Edit
         </button>
 

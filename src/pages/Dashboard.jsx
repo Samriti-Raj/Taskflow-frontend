@@ -40,61 +40,61 @@ export default function Dashboard() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-50 p-4 sm:p-6 lg:p-8">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-50 p-3 sm:p-4 md:p-6">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-6 sm:mb-8">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-2">Dashboard</h1>
-          <p className="text-base sm:text-lg text-black">Overview of your team and tasks</p>
+        <div className="mb-4 md:mb-6">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-1">Dashboard</h1>
+          <p className="text-sm md:text-base text-gray-600">Overview of your team and tasks</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all p-4 sm:p-6 border border-green-100"
+              className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all p-3 md:p-4 border border-green-100"
             >
-              <div className={`w-12 h-12 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br ${stat.color} flex items-center justify-center mb-3 sm:mb-4`}>
-                <stat.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+              <div className={`w-10 h-10 md:w-12 md:h-12 rounded-lg bg-gradient-to-br ${stat.color} flex items-center justify-center mb-2 md:mb-3`}>
+                <stat.icon className="w-5 h-5 md:w-6 md:h-6 text-white" />
               </div>
-              <h2 className="text-sm sm:text-base font-medium text-black mb-1">{stat.label}</h2>
-              <p className={`text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
+              <h2 className="text-xs md:text-sm font-medium text-gray-600 mb-1">{stat.label}</h2>
+              <p className={`text-2xl md:text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
                 {stat.value}
               </p>
             </div>
           ))}
         </div>
 
-        <div className="mt-6 sm:mt-8 grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
-          <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 border border-green-100">
-            <h2 className="text-xl sm:text-2xl font-bold text-black mb-4">Recent Tasks</h2>
-            <div className="space-y-3">
+        <div className="mt-4 md:mt-6 grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-4">
+          <div className="bg-white rounded-xl shadow-md p-3 md:p-4 border border-green-100">
+            <h2 className="text-lg md:text-xl font-bold text-black mb-3">Recent Tasks</h2>
+            <div className="space-y-2">
               {tasks.slice(0, 3).map((task) => (
-                <div key={task._id} className="flex items-start gap-3 p-3 rounded-lg hover:bg-green-50 transition">
+                <div key={task._id} className="flex items-start gap-2 p-2 rounded-lg hover:bg-green-50 transition">
                   <div
-                    className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${
+                    className={`w-2 h-2 rounded-full mt-1.5 flex-shrink-0 ${
                       task.status === "completed" ? "bg-green-500" : "bg-amber-500"
                     }`}
                   />
                   <div className="flex-1 min-w-0">
-                    <p className="font-semibold text-base sm:text-lg text-black truncate">{task.title}</p>
-                    <p className="text-sm sm:text-base text-black line-clamp-2">{task.description}</p>
+                    <p className="font-semibold text-sm md:text-base text-black truncate">{task.title}</p>
+                    <p className="text-xs md:text-sm text-gray-600 line-clamp-2">{task.description}</p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 border border-green-100">
-            <h2 className="text-xl sm:text-2xl font-bold text-black mb-4">Team Members</h2>
-            <div className="space-y-3">
+          <div className="bg-white rounded-xl shadow-md p-3 md:p-4 border border-green-100">
+            <h2 className="text-lg md:text-xl font-bold text-black mb-3">Team Members</h2>
+            <div className="space-y-2">
               {employees.slice(0, 5).map((emp) => (
-                <div key={emp._id} className="flex items-center gap-3 p-3 rounded-lg hover:bg-green-50 transition">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-white text-lg sm:text-xl font-bold flex-shrink-0">
+                <div key={emp._id} className="flex items-center gap-2 p-2 rounded-lg hover:bg-green-50 transition">
+                  <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-white text-sm md:text-base font-bold flex-shrink-0">
                     {emp.name.charAt(0)}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <p className="font-semibold text-base sm:text-lg text-black truncate">{emp.name}</p>
-                    <p className="text-sm sm:text-base text-black truncate">{emp.role}</p>
+                    <p className="font-semibold text-sm md:text-base text-black truncate">{emp.name}</p>
+                    <p className="text-xs md:text-sm text-gray-600 truncate">{emp.role}</p>
                   </div>
                 </div>
               ))}

@@ -24,25 +24,25 @@ export default function Tasks() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-50 p-4 sm:p-6 lg:p-8">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-50 p-3 sm:p-4 md:p-6">
       <div className="max-w-7xl mx-auto">
 
-        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-6 sm:mb-8 gap-4">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-4 md:mb-6 gap-3">
           <div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-2">Tasks</h1>
-            <p className="text-base sm:text-lg text-black">Track and manage all tasks</p>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-1">Tasks</h1>
+            <p className="text-sm md:text-base text-gray-600">Track and manage all tasks</p>
           </div>
 
           <button
             onClick={() => navigate("/add-task")}
             className="bg-gradient-to-r from-green-500 to-emerald-600 text-white 
-                       px-6 py-3 rounded-xl whitespace-nowrap self-start sm:self-auto"
+                       px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap self-start sm:self-auto hover:shadow-md transition"
           >
             + Add Task
           </button>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
           {tasks.map((task) => {
 
             const emp = employees.find(
