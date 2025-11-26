@@ -92,24 +92,19 @@ npm install
 Create a .env file:
 
 PORT=5000
-Start the backend:
-
-npm start
+Start the backend: npm start
 
 # Frontend Setup
 cd frontend
 npm install
 npm run dev
 
-
-Your app will run at:
+app will run at:
 
 Frontend : http://localhost:5173
 Backend  : http://localhost:5000
 
 # Screenshots
-
-Add your screenshots in a screenshots/ folder and link them here:
 
 ![Dashboard](./screenshots/dashboard.png)
 ![Employees](./screenshots/employees.png)
