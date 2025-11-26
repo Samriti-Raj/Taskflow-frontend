@@ -38,7 +38,7 @@ CORS
 
 Database
 
-MongoDB (Local or Atlas)
+MongoDB (Atlas)
 
 # Project Structure
 Track3/
