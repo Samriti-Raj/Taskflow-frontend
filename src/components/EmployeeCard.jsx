@@ -14,7 +14,7 @@ export default function EmployeeCard({ emp }) {
       .delete(`${API_BASE_URL}/employees/${emp._id}`)
       .then(() => {
         alert("Employee deleted successfully!");
-        window.location.reload();
+        navigate(0);
       })
       .catch(() => alert("Failed to delete employee"));
   };
