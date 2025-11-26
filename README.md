@@ -1,7 +1,7 @@
 # TASKFLOW MANAGER
 
 TaskFlow Manager is a small full-stack project built for the Track 3 assignment.
-The goal was to create a complete system where you can:
+The goal was to create a complete system where we can:
 
 Manage employees
 
